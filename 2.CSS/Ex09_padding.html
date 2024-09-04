@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 150px;
+            margin-bottom: 5px;
+            padding: 10px;
+            /* box-sizing: 요소의 크기가 화면에 보여지는 방식 
+                1. content-box(기본값): 내용(content)의 크기를 지정
+                    ex)width : 100px로 줬을 때
+                        content의 크기만 100px
+                2. border-box : content+border+padding의 크기를 지정
+                    ex) width : 100px로 줬을 때
+                        content+border+padding = 100px */
+            box-sizing: border-box;
+        }
+        #small{
+            border: 10px solid black;
+        }
+        #big{
+            border: 20px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="small">Content(내용)</div>
+    <div id="big">Content(내용)</div>
+</body>
+</html>

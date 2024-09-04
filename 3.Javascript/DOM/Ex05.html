@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>랜덤게임</h1>
+    <input>
+    <button onclick="attempt()">도전!</button>
+    <h1 id="n">지금까지 입력한 숫자 : </h1>
+
+    <script>
+        let ranNum = Math.floor(Math.random()*10)+1
+        // let numList = []
+        function attempt(){           
+           let userNum = parseInt(document.getElementsByTagName('input')[0].value)
+            // numList.push(userNum)
+            if(userNum==ranNum){
+                alert("정답입니다.")
+            }else{
+                // h1 태그에 출력!
+                let text = document.getElementById('n').innerText
+                text += userNum+"\u00a0"  // -> 
+                document.getElementById("n").innerText = text
+        } 
+    }
+
+
+    </script>
+</body>
+</html>

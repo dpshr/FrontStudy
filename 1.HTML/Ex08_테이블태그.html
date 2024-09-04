@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>테이블 태그로 메뉴판 만들기</h1>
+    <table border ="1">
+        <!-- caption : 표의 제목 -->
+        <caption> 엄마손칼국수 </caption>
+        <thead>
+            <!-- tr(table row): 행 -->
+            <tr>
+                <!-- th(table header): 행 내의 제목 -->
+                <th>메뉴</th>
+                <th>가격</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- td(table data): 행 내의 열(데이터) -->
+                <td>칼국수</td>
+                <td>8,000원</td>
+                <td rowspan="3">식사</td>
+            </tr>
+            <tr>
+                <td>돌솥비빔밥</td>
+                <td>8,000원</td>
+                
+            </tr>
+            <tr>
+                <td>팥죽</td>
+                <td>8,000원</td>
+                
+            </tr>
+            <tr>
+                <td>맥주</td>
+                <td>5,000원</td>
+                <td rowspan="2">주류</td>
+            </tr>
+            <tr>
+                <td>소주</td>
+                <td>5,000원</td>
+                
+            </tr>
+            <tr>
+                <td>막걸리</td>
+                <td colspan="2">판매중지</td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

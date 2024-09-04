@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* .container를 컨테이너로, .card들을 아이템으로 설정 */
+            display: flex;
+
+            /* 카드가 줄바꿈이 되도록 */
+            flex-wrap: wrap;
+            /* 카드들의 여백이 균일하도록 */
+            justify-content: space-evenly;
+        }
+        .card{
+            background-color: lightgoldenrodyellow;
+            /* 이미지와 텍스트가 아이템이 되도록 설정 */
+            display: flex;
+            /* 이미지와 텍스트를 세로로 배치 */
+            flex-direction: column;
+            /* 이미지와 텍스트를 가운데 정렬 */
+            align-items: center;
+            /* 모서리 둥글게 */
+            border-radius: 20%;
+            /* 카드끼리 사이에 여백추가 */
+            margin-bottom: 50px;   
+        }
+        /* 카드에 마우스를 올리면 색깔 변경 */
+        .card:hover{
+            background-color: lightcoral;
+        }
+        .imgSec{
+            width: 200px;
+            height: 200px;
+            /* 배경이미지 설정 */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .textSec{
+            font-weight: bold;
+            font-size: 1rem;
+            
+        }
+
+        /* 카드별로 아이스크림 이미지 넣기 */
+        /* background 속성 : 요소의 배경 이미지 설정 */
+
+        .img1{
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/main/91c8668227bcf556c43a968b97e342e6.png);
+        }
+        .img2{
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/main/60a04a3a5d1b0119f065d12ee7797b2c.png);
+        }
+        .img3{
+            background-image: url(https://www.baskinrobbins.co.kr/upload/product/main/e7cb5667c3147ddb0b31e28d1f365980.png);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="imgSec img1"></div>
+            <div class="textSec">엄마는 외계인</div>
+        </div>
+        <div class="card">
+            <div class="imgSec img2"></div>
+            <div class="textSec">뉴욕치즈케이크</div>
+        </div>
+        <div class="card">
+            <div class="imgSec img3"></div>
+            <div class="textSec">아몬드 봉봉</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>신나는 금요일</h1>
+    <button>클릭</button>
+    
+    <hr>
+
+    <input>
+    <button id="btnInput">클릭</button>
+    <h1 id="result"></h1>
+    <!-- Jquery 라이브러리 import 하는 부분 -->
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+        // 버튼 클릭시 h1 태그 색깔을 빨간색으로 바꾸고 싶어요!
+        // document.querySelector('button').addEventListener('click',function(){
+
+        // })
+
+        // Jquery 객체로 태그를 가져오게 된다면 --> 복수개(배열)
+        // Jquery 객체에 맞는 별도의 기능이 존재한다.
+        $('button').on('click',function(){
+            // $("h1")[0].style.color = 'red'
+            $("h1").css('color','red')
+            // document.querySelector('h1').innerText
+            $('h1').text("오늘은 기필코 칼퇴!")
+        })
+        
+        $("#btnInput").on('click',function(){
+          let text = $("input").val()
+          $("#result").text(text)
+        })
+
+
+        
+    </script>
+</body>
+</html>

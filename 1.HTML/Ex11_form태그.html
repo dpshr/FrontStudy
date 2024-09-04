@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form태그: 입력양식태그</h1>
+    <!-- 사용자로부터 데이터를 입력받아서 전송할 때 사용하는 태그 -->
+    <form action="">
+        <!-- *action: 데이터를 전송할 위치(경로) -->
+        <!-- *name: 데이터를 구분하기 위한 이름(필수) -->
+        <!-- placehoder: 미리보기 기능 -->
+        <!-- *value: 기본값을 지정하는 기능 -->
+        아이디: <input type="text" name="id" placeholder="아이디"><br>
+        비밀번호: <input type="password"name="pw"> <br>
+        비밀번호 확인: <input type="password"name="pwCheck"><br>
+        이름: <input type=""name="name"><br>
+        소속: <input type="text"name="company" value="스마트인재개발원">
+        <hr>
+        혈액형
+        <!-- value 값이 없을 때는 option 태그의 contents(내용)이 전송
+             value 값이 있을 때는 option 태그의 value값이 전송 ->Blood B
+         --> 
+        <select name="blood">
+            <option >A형</option>
+            <option value="Blood B">B형</option>
+            <option value="">AB형</option>
+            <option value="">O형</option>
+        </select>
+        <hr>
+        성별
+        <!-- name을 같게 하는 이유 : 해당 데이터들(남,여)가 
+                                    geneder 라는 카테고리로 그룹핑되어야하기 때문에 -->
+        남<input type="radio" name="gender" value="남">
+        여<input type="radio" name="gender" value="여">
+        <hr>
+        좋아하는 음식 : 
+        치킨 <input type="checkbox" name="food" value="치킨">
+        피자 <input type="checkbox" name="food" value="피자">
+        햄버거 <input type="checkbox" name="food" value="햄버거">
+        <hr>
+        파일 선택: <input type="file" name="file">
+        <hr>
+        색깔 선택: <input type="color" name="color">
+        <hr>
+        날짜 선택: <input type="date" value="birth">
+        <hr>
+        날짜+시간 선택: <input type="datetime-local" value="meeting">
+        <hr>
+        <textarea name="message" id="" cols="50" rows="10" 
+                    style="resize: none;">
+        </textarea>
+        <hr>
+        <!-- input에 있는 값을 전부 초기화 -->
+        <input type="reset" value="삭제">
+        <hr>
+         <!--input에 있는 값을 전부 전송  -->
+        <input type="submit" value="회원가입">
+    </form>
+</body>
+</html>

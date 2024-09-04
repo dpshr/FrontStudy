@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>순위</td>
+            <td>영화제목</td>
+            <td>개봉일</td>
+        </tr>
+    </table>
+    <button onclick="getData()">영화정보가져오기</button>
+
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+        let myUrl = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20120101"
+
+        function getData(){
+            $.ajax({
+            url:myUrl,
+            success : function(res){ 
+                let movieList = res.boxOfficeResult.dailyBoxOfficeList
+               
+                for(let i = 0 ; i<movieList.length ; i++){
+                    const tr1 = document.createElement("tr")
+                    const td1 = document.createElement("td")
+                    const td2 = document.createElement("td")
+                    const td3 = document.createElement("td")
+                    $("table")[0].appendChild(tr1)
+                    tr1.appendChild(td1)
+                    tr1.appendChild(td2)
+                    tr1.appendChild(td3)
+                    td1.append(movieList[i].rank)
+                    td2.append(movieList[i].movieNm)
+                    td3.append(movieList[i].openDt)
+                }
+                alert("통신성공")
+            },
+            error : function(){ 
+                alert("통신실패")
+            }
+        })
+        }
+    </script>
+</body>
+</html>

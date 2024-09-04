@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input>
+    <button onclick="printData()">클릭</button>
+    <h1></h1>
+
+    <script>
+        // 버튼 클릭 시 input 태그에 적은 내용을 
+        // h1 태그에 출력하고 싶습니다.
+        function printData(){
+            // 1. input 태그에 적은 내용을 가져오기
+            // input 태그에 적은 값은 value라는 속성으로 저장된다!
+            let text = document.getElementsByTagName('input')[0].value
+             document.querySelector('h1').innerText = text
+        }
+    </script>
+</body>
+</html>

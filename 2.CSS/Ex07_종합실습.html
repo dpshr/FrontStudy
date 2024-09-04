@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.sup태그가 화면에 보이지 않게 */
+        sup{
+            display: none;
+        }
+        /* 2. a태그에 마우스를 올리면(:hover) sup태그가 화면에 보이게(inline) */
+        a:hover+sup{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.naver.com/">네이버</a>
+    <sup>www.naver.com</sup>
+    <br>
+    <a href="https://www.daum.net/">다음</a>
+    <sup>www.daum.net</sup>
+</body>
+</html>

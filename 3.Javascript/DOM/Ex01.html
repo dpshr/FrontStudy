@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM 사용해보기</h1>
+    <h1>금요일 얼른 와라</h1>
+    <button>클릭</button>
+    <script>
+        // DOM : document object model 
+        //     : Javascript에서 태그 에 접근 할 수 있게끔
+        //       HTML태그들을 Javascript 객체로 변환시킨  문서 
+        document.querySelector("button").style.color="red"
+
+        // 버튼 클릭시 h1 태그의 색상을 빨간색으로 바꾸고 싶어요
+        // 첫번째 클릭 -> 빨간
+        // 두번째 클릭 -> 파랑
+        // 세번째 클릭 -> 초록
+        // document.querySelector()
+        // --> 선택자를 통해서 검색된 태그중 제일 첫번째 태그만 가져오겠습니다.
+        // document.querySelectorAll()
+        // --> 선택자를 통해서 검색된 태그를 전부 '배열'로 가져온다.
+        // --> NodeList (요소(태그개체)들이 담긴 배열) 주의!, pop,push 사용 못함
+        let cnt = 0;
+        document.querySelector("button").addEventListener("click",function(){
+            cnt++
+            if(cnt==1){
+                document.querySelectorAll("h1")[0].style.color="red"
+                document.querySelectorAll("h1")[1].style.color="red"
+
+            }else if(cnt==2){
+                document.querySelectorAll("h1")[0].style.color="blue"
+                document.querySelectorAll("h1")[1].style.color="blue"
+            }else if(cnt==3){
+                document.querySelectorAll("h1")[0].style.color="green"
+                document.querySelectorAll("h1")[1].style.color="green"
+                cnt = 0
+            }
+        })
+
+    </script>
+</body>
+</html>

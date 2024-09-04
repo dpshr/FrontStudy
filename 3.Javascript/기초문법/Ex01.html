@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>즐거운 수요일</h1>
+    <!-- <h1>금요일 얼른와요</h1> -->
+    <script>
+        // Javascript: 웹페이지를 동적으로 다루기 위해서
+        //           : --> 태그들을 동적으로 컨트롤하기 위해서
+        
+        // 클릭,글씨색상, 태그 생성 후 추가
+        // 1. 내가 다루고 싶은 태그를 가져오기(중요) 
+        let cnt = 0;
+        document.querySelector("h1").addEventListener('click',function(){
+            if(cnt == 0){
+                document.querySelector("h1").style.color="red"
+                cnt++
+            }else{
+                document.querySelector("h1").style.color="black"
+                cnt--
+            }
+        })
+    </script>
+</body>
+</html>

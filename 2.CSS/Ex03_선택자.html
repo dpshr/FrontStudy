@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. 전체선택자 */
+        *{
+            color: blue;
+        }
+        /* 2. 타입선택자 */
+        h1{
+            color: aquamarine;
+        }
+        li{
+            color: brown;
+        }
+        /* 3. 클래스선택자(.) */
+        /* Java수업을 들어온 선생님들만 배경색을 yellow */
+        .java{
+            background-color: yellow;
+        }
+        /* 4. 아이디 선택자(#) */
+        /* Python 수업을 들어온 선생님의 배경색을 green */
+        #python{
+            background-color: green;
+        }
+        /* DB수업을 들어온 선생님의 배경색을 tomato */
+        #db{
+            background-color: tomato;
+        }
+        body li{
+            font-size: 30px;
+        }
+        li.java{
+            font-style: italic;
+        }
+        li~.java{
+            font-weight: bold;
+        }
+        li.java ~ #db{
+            color: purple;
+        }
+
+        
+    
+        
+    </style>
+</head>
+<body>
+    <h1> DCX 빅데이터반</h1>
+    <ul>
+        <li class="java">채수민</li>
+        <li class="java">김운비</li>
+        <li class="java">임승환</li>
+        <p class="java">송승호</p>
+        <p class="java">박지승</p>
+        <li class="java" id="db">박수현</li>
+        <li id="python">임영주</li>
+    </ul>
+</body>
+</html>

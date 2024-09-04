@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체: 현실에 있는 특정 물건, 내용 코드로 표현 할 수 있는 수단 
+        //    --> 데이터와 기능을 한번에 묶어서 다룰 수 있는 방법
+
+        //휴대폰(번호,기종,전화를 걸다, 메세지를 보내다.)
+        // {}-->객체
+        // key - value
+        let phone={
+            number : "01058934342",
+            kind : "G21",
+
+            call: function(){
+                console.log("전화를 걸다")
+            },
+            massage : function(){
+                console.log("메세지를 보내다.")
+            }
+        }
+        console.log(phone.number)
+        phone.massage()
+
+
+    </script>
+</body>
+</html>

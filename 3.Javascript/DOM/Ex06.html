@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="preImg()">이전</button>
+    <img src="1.png">
+    <button onclick="nextImg()">다음</button>
+    
+    
+    <script>
+        let imgList = ["1.png","2.png","3.png"]
+        let cnt = 0      
+        function nextImg(){
+            if(cnt!=imgList.length-1){
+            cnt++
+            document.querySelector("img").src= imgList[cnt]
+            }else{
+                alert("이미지가 없습니다.")
+            }
+            
+        }
+        function preImg(){
+            if(cnt==0){
+                alert("이미지가 없습니다.")
+            }else{
+                cnt--
+                document.querySelector("img").src= imgList[cnt]
+            }
+        }
+    </script>
+</body>
+</html>

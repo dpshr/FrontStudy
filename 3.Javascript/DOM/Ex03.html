@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>내일은 금요일!</h1>
+    <button onclick="chText()">클릭</button>
+
+    <h1 id="num">0</h1>
+    <button onclick="addNum()">+1증가</button>
+    <button onclick="minusNum()">-1감소</button>
+    <script>
+        // 버튼 클릭 시 내일은 금요일
+        // --> 다음주도 4일 만 나오면 됩니다.
+        // document.querySelector("button").addEventListener('click',function(){
+            
+        // })
+
+         function chText(){
+            document.querySelectorAll('h1')
+            // innerText : content 영역에 텍스트 데이터를 다루겠습니다.
+            // innerHTML : content 영역에 태그형식의 문자열 데이터를 다루겠습니다.
+            // document.querySelector('h1').innerText = "다음주도 평일은 4일"
+            document.querySelector('h1').innerHTML = "<a href='#'>다음주도 평일은 4일</a>"
+        }
+
+        function  addNum(){
+           let num = parseInt(document.getElementById("num").innerText)
+           num++
+           document.getElementById('num').innerText = num
+        }
+        function  minusNum(){
+            let num = parseInt(document.getElementById("num").innerText)
+            if(num!==0){
+                num--
+                document.getElementById('num').innerText = num
+            }
+        }
+    </script>
+</body>
+</html>

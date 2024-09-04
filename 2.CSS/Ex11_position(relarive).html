@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position: relative
+        -> 현재 요소의 위치(static)를 기준으로 상대적인 위치를 설정 */
+        div{
+            width: 100px;height: 100px;
+            position: relative;
+        }
+        .div1{
+            background-color: #ff4949;
+            left:50px;
+            top: 30px;
+            z-index: 3;
+            /* z-index: 화면에 요소가 쌓이는 순서
+                      : 숫자가 높을수록 앞쪽에 배치(음수,양수 둘 다 가능) */
+        }
+        .div2{
+            background-color: #f9ca24;
+            z-index: 5;
+        }
+        .div3{
+            background-color: #0984e3;
+            bottom: 30px;
+            right: 50px;
+            z-index: 8;
+        }
+    </style>
+</head>
+<body>
+    <!-- (div.div$)*3 -->
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+
+</body>
+</html>

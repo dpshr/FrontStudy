@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position : absolute
+                    : 조상요소(static이 아닌)를 기준으로 해서 절대 위치 좌표 설정
+                    : 모든 조상이 static이라면 body를 기준으로 위치 설정 */
+        #parents{
+            height: 300px;
+            border: 10px solid black;
+            position: relative;
+        }
+        #child1{
+            height: 100px;
+            width: 100px;
+            background-color: tomato;
+            position: absolute;
+            /*  absolute : 부모 내에서만 이동(절대 위치)
+                relative : 내위치를 기준으로 이동(상대적인 위치) */
+            bottom: 50px;
+            right: 50px;
+        }
+        #child2{
+            height: 100px;
+            width: 100px;
+            background-color: aquamarine;
+            position: relative;
+            /*  absolute : 부모 내에서만 이동(절대 위치)
+                relative : 내위치를 기준으로 이동(상대적인 위치) */
+            bottom: 50px;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div2개를 만들건데 
+        부모div : id parents
+        자식div : id child -->
+        <!-- div#parents>div#child -->
+        <div id="parents">
+            <div id="child1">absolute</div>
+            <div id="child2">relative</div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="num">Like! ♥ 0</h1>
+    <button onclick="plus()">+1증가</button>
+    <button onclick="minus()">-1감소</button>
+    <button onclick="reset()">초기화</button>
+
+    <script>
+        function plus(){
+        let str =  document.getElementById("num").innerText[8]
+        let num = parseInt(str)
+        num++
+        document.getElementById('num').innerText = "Like! ♥ "+num
+        }
+        function minus(){
+        let str =  document.getElementById("num").innerText[8]
+        let num = parseInt(str)
+        if(num!==0){
+            num--
+            document.getElementById('num').innerText = "Like! ♥ "+num
+        }
+        }
+        function reset(){
+          document.getElementById('num').innerText = "Like! ♥ 0"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+           width: 100px;
+           height: 100px;
+        }
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: green;
+        }
+        #gray{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="red"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="gray"></div>
+    <button id="margin">Margin 이동!</button>
+    <button id="radius">border Radius효과주기!</button>
+
+    <script>
+        document.getElementById("margin").addEventListener("click",function(){
+            document.getElementById("green").style.marginLeft="100px"
+            document.getElementById("blue").style.marginLeft="200px"
+            document.getElementById("gray").style.marginLeft="300px"
+        })
+        document.getElementById("radius").addEventListener("click",function(){
+            let list = document.querySelectorAll("div")
+          for(let i=0 ; i<list.length;i++){
+            list[i].style.borderTopRightRadius="50%"
+            list[i].style.borderBottomLeftRadius="50%"
+          }            
+        })
+    </script>
+</body>
+</html>
